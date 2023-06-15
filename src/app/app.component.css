@@ -8,9 +8,40 @@
     word-wrap: break-word;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    transition: .5s;
+}
+
+.todoPost span{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
 .todoPost p{
     font-size: 1.5rem;
     
 }
+
+.todoPost .delete{
+    
+    width: auto;
+    height: auto;
+}
+
+.postsit{
+    transition: .5s;
+    
+}
+.todoPost:hover .postsit{
+    transition: .5s;
+    filter: blur(5px);
+}
+
+.todoPost:hover .delete{
+    width: auto;
+    height: auto;
+    opacity: 100%;
+}
+
+
+/* TODO overflow hidden move the delete up and when hover go down  */

@@ -10,6 +10,9 @@ export class AppComponent implements OnInit{
   title = 'todoList';
 
   list : string[] = []
+  delay : Function = (ms : number) : Promise<void> => {
+    return  new Promise( res => setTimeout(res,ms))
+  }
   
   formTodo : FormGroup = new FormGroup({
     todo : new FormControl('')
@@ -35,7 +38,7 @@ export class AppComponent implements OnInit{
     this.formTodo.get('todo')?.reset()
   }
 
-  doneTodo( position : number ) : void {
+  todoDone( position : number ) : void {
 
     console.log(position)
     this.list.splice(position,1)

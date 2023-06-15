@@ -13,8 +13,17 @@
 
 <!-- check if we have something todo -->
 <div *ngIf="list.length !== 0 ; else nothingTodo" class="row">
-    <div *ngFor="let item of list; index as i" class="todoPost">
-      <p class="lh-base">{{ item }}</p>
+    <div *ngFor="let item of list; index as i" (click)="todoDone(i)" class="todoPost">
+      <div class="delete">
+        <span>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </span>
+        <hr>
+      </div>
+      <div class="postsit">
+        <p class="lh-base">{{ item }}</p>
+      </div>
+
     </div>
 </div>
 
