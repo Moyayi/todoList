@@ -51,7 +51,7 @@
 }
 .todoPost:hover .postsit{
     transition: .5s;
-    filter: blur(5px);
+    /* filter: blur(5px); */
 
     
 }
@@ -65,7 +65,7 @@
 
 .addedNewTodo{
     animation-name: appearsEffect;
-    animation-duration: 1.5s;
+    animation-duration: s;
     animation-iteration-count: 1;
 }
 
