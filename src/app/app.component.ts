@@ -24,7 +24,6 @@ export class AppComponent implements OnInit, AfterViewChecked{
   ){}
   
   ngOnInit(): void {
-    // localStorage.removeItem("todo")
     if( localStorage.getItem("todo") !== null){
       this.list = JSON.parse(localStorage.getItem("todo")!)
     }
@@ -37,10 +36,6 @@ export class AppComponent implements OnInit, AfterViewChecked{
   
     this.effectNewElement(testing!)
 
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log("Se ha cambiado el DOM")
   }
 
   addTodo(  ) : void {
