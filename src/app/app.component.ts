@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
   delay : Function = (ms : number) : Promise<void> => {
     return  new Promise( res => setTimeout(res,ms))
   }
-  
+
   formTodo : FormGroup = new FormGroup({
     todo : new FormControl('')
   })
@@ -40,7 +40,7 @@ export class AppComponent implements OnInit{
 
   todoDone( position : number ) : void {
 
-    console.log(position)
+    
     this.list.splice(position,1)
     localStorage.setItem('todo', JSON.stringify(this.list))
   }

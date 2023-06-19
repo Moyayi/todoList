@@ -1,6 +1,17 @@
+
+.list{ 
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 
+    repeat(
+        auto-fit, 
+        minmax(150px, 1fr)
+    );
+    gap: 10rem;
+}
+
 .todoPost{
     background-color: rgb(247, 218, 102);
-    margin: 1rem .5rem;
     width: 300px;
     height: 300px;
     padding: 1rem;
@@ -23,9 +34,11 @@
 }
 
 .todoPost .delete{
-    
+    position:relative;
     width: auto;
     height: auto;
+    top:-4rem;
+    transition: .5s;
 }
 
 .postsit{
@@ -38,10 +51,10 @@
 }
 
 .todoPost:hover .delete{
+    top:0rem;
     width: auto;
     height: auto;
-    opacity: 100%;
+    transition: .5s;
 }
-
 
 /* TODO overflow hidden move the delete up and when hover go down  */
