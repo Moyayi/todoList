@@ -9,7 +9,10 @@
     );
     gap: 10rem;
 }
-
+.spacer{ 
+    width: auto;
+    height: 100px;
+}
 .todoPost{
     background-color: rgb(247, 218, 102);
     width: 300px;
@@ -20,6 +23,7 @@
     overflow-y: scroll;
     scroll-behavior: smooth;
     transition: .5s;
+
 }
 
 .todoPost span{
@@ -48,6 +52,8 @@
 .todoPost:hover .postsit{
     transition: .5s;
     filter: blur(5px);
+
+    
 }
 
 .todoPost:hover .delete{
@@ -57,4 +63,32 @@
     transition: .5s;
 }
 
-/* TODO overflow hidden move the delete up and when hover go down  */
+.addedNewTodo{
+    animation-name: appearsEffect;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.deleteTodo{
+    animation-name: disappearEffect;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes appearsEffect {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes disappearEffect {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}

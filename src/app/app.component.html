@@ -13,7 +13,7 @@
 
 <!-- check if we have something todo -->
 <div *ngIf="list.length !== 0 ; else nothingTodo" class="list">
-    <div *ngFor="let item of list; index as i" class="todoPost">
+    <div *ngFor="let item of list; index as i" class="todoPost" [id]="i">
       <div class="delete">
         <span>
           <i (click)="todoDone(i)" class="fa fa-times" aria-hidden="true"></i>
@@ -30,3 +30,5 @@
 <ng-template #nothingTodo>
   <h2 class="text-center mt-5">There is nothing to do</h2>
 </ng-template>
+<div class="spacer">
+</div>
