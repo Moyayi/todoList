@@ -1,5 +1,5 @@
-import { AfterViewChecked, Component, OnInit, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AfterViewChecked, Component, OnInit  } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup  } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
